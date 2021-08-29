@@ -1,4 +1,36 @@
+/* ##########################
+    Global Styles
+########################## */
 body {
-    background-color:black;
-    color: white;
+    
+    outline: orange, solid, 5px;
+}
+
+
+
+/* ##########################
+    Components
+########################## */
+div {
+    width: 300px;
+	height: 400px;
+	background-color: red;
+	
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
+}
+
+
+.buttonContainer {
+    display: grid;
+    list-style: none;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-gap: 5px;
+    align-items: center;
+    
 }
