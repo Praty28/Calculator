@@ -42,6 +42,17 @@ let operate = function (a, b, c) {
     else {
        return console.log('ERRUR');
     }
-}
+};
 
 
+
+/* ##########################
+    Button Selectors
+########################## */
+
+const numberOne = document.querySelector(".numberOne") 
+
+numberOne.addEventListener('click', () => {
+   const displayText = document.querySelector('p.displayText');
+   return displayText.textContent += 1;
+});
