@@ -50,9 +50,20 @@ let operate = function (a, b, c) {
     Button Selectors
 ########################## */
 
+const clear = document.querySelector(".clear")
+
+clear.addEventListener('click', () => { 
+    return document.querySelector('p.displayText').textContent = "";
+});
+
 const numberOne = document.querySelector(".numberOne") 
 
 numberOne.addEventListener('click', () => {
-   const displayText = document.querySelector('p.displayText');
-   return displayText.textContent += 1;
+   return document.querySelector('p.displayText').textContent += 1;
+});
+
+const numberTwo = document.querySelector(".numberTwo") 
+
+numberTwo.addEventListener('click', () => {
+   return document.querySelector('p.displayText').textContent += 2;;
 });
