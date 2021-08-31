@@ -56,14 +56,9 @@ clear.addEventListener('click', () => {
     return document.querySelector('p.displayText').textContent = "";
 });
 
-const numberOne = document.querySelector(".numberOne") 
 
-numberOne.addEventListener('click', () => {
-   return document.querySelector('p.displayText').textContent += 1;
-});
+const allButtons = document.querySelectorAll("button:not(#exclude)")
 
-const numberTwo = document.querySelector(".numberTwo") 
-
-numberTwo.addEventListener('click', () => {
-   return document.querySelector('p.displayText').textContent += 2;;
-});
+Array.from(allButtons).forEach((el, index) => el.addEventListener('click', () => {
+    document.querySelector('.displayText').textContent += allButtons[index].textContent;
+}))
