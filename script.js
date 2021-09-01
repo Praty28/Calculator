@@ -24,7 +24,10 @@ const multiply = function(a, b) {
 
 
 const divide = function(a, b) {
-    return a / b
+    if (!(a / b)) {
+        return "Undefined"
+    }
+    else {return a / b}
 
 }
 
@@ -72,6 +75,7 @@ clear.addEventListener('click', () => {
     onlyNumbers = '';
     firstValue = '';
     secondValue = '';
+    operatorValue = '';
     return document.querySelector('p.displayText').textContent = "";
     
 });
@@ -87,8 +91,13 @@ Array.from(allButtons).forEach((el, index) => el.addEventListener('click', () =>
 const operations = document.querySelectorAll('.operatorMultiply, .operatorDivide, .operatorSubtract, .operatorAdd');
 
 Array.from(operations).forEach((el, index) => el.addEventListener('click', () => {
+    if (operatorValue) {
+        secondValue = Number(onlyNumbers);
+        firstValue = document.querySelector('.displayText').textContent = operate(firstValue, operatorValue, secondValue);
+    }
     operatorValue = operations[index].textContent
     displayValue = document.querySelector('.displayText').textContent;
+    
     if ( !firstValue ) {
         firstValue = Number(onlyNumbers);
     }
