@@ -30,19 +30,19 @@ const divide = function(a, b) {
 
 let operate = function (a, b, c) {
     
-    if (b == 'plus') {
+    if (b == '+') {
         return add(a,c);
     }
 
-    else if (b == 'minus') {
+    else if (b == '-') {
         return subtract(a,c);
     }
     
-    else if (b == 'upon') {
+    else if (b == '÷') {
         return divide(a,c);
     }
 
-    else if (b == 'into') {
+    else if (b == 'x') {
         return multiply(a,c);
     }
 
@@ -57,6 +57,7 @@ let operate = function (a, b, c) {
     Variables
 ########################## */
 let displayValue = '';
+let operatorValue = '';
 let onlyNumbers = '';
 let firstValue = '';
 let secondValue = '';
@@ -69,6 +70,8 @@ const clear = document.querySelector(".clear")
 
 clear.addEventListener('click', () => { 
     onlyNumbers = '';
+    firstValue = '';
+    secondValue = '';
     return document.querySelector('p.displayText').textContent = "";
     
 });
@@ -84,8 +87,28 @@ Array.from(allButtons).forEach((el, index) => el.addEventListener('click', () =>
 const operations = document.querySelectorAll('.operatorMultiply, .operatorDivide, .operatorSubtract, .operatorAdd');
 
 Array.from(operations).forEach((el, index) => el.addEventListener('click', () => {
+    operatorValue = operations[index].textContent
     displayValue = document.querySelector('.displayText').textContent;
-    firstValue = Number(onlyNumbers);
+    if ( !firstValue ) {
+        firstValue = Number(onlyNumbers);
+    }
+    else {
+        secondValue = Number(onlyNumbers);
+    }
+    onlyNumbers = '';
     console.log(firstValue);
+    console.log(secondValue);
+    console.log(operatorValue);
     document.querySelector('.displayText').textContent += operations[index].textContent;
 }))
+
+const equals = document.querySelector('.equals')
+
+
+
+ const executeOperation = equals.addEventListener('click', () => {
+     secondValue = Number(onlyNumbers);
+     console.log(secondValue);
+     document.querySelector('.displayText').textContent = operate(firstValue, operatorValue, secondValue);});
+
+     
