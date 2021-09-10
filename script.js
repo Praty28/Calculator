@@ -87,7 +87,15 @@ let secondValue = '';
 /* ##########################
     Buttons Top Row
 ########################## */
+var powerButton = document.querySelector(".power");
 
+
+powerButton.addEventListener("click", function() {
+
+    document.querySelector('p.displayText').textContent = "";
+    document.getElementById("displaySpan").classList.toggle("display"); 
+
+});
 
 const clear = document.querySelector(".AC")
 
