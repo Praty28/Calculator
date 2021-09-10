@@ -9,9 +9,7 @@ const add = function(a, b) {
     if ((a + b) == 0) {
         return 0
     }
-    else if (!(a / b) || (a / b) == Infinity) {
-        return "Undefined"
-    }
+    
     else {return a + b}
 }
 
@@ -55,19 +53,19 @@ const divide = function(a, b) {
 let operate = function (a, b, c) {
     
     if (b == ' + ') {
-        return add(a,c);
+        return Math.round(add(a,c) * 100) / 100;
     }
 
     else if (b == ' - ') {
-        return subtract(a,c);
+        return Math.round(subtract(a,c) * 100) / 100;
     }
     
     else if (b == ' ÷ ') {
-        return divide(a,c);
+        return Math.round(divide(a,c) * 100) / 100;
     }
 
     else if (b == ' x ') {
-        return multiply(a,c);
+        return Math.round(multiply(a,c) * 100) / 100;
     }
 
     else {
