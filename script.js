@@ -141,13 +141,18 @@ Array.from(operations).forEach((el, index) => el.addEventListener('click', () =>
     document.querySelector('.displayText').textContent += operations[index].textContent;
 }))
 
+/* ##########################
+    Operation Execution
+########################## */
+
 const equals = document.querySelector('.equals')
 
 
 
  const executeOperation = equals.addEventListener('click', () => {
      secondValue = Number(onlyNumbers);
-     console.log(secondValue);
+     
      document.querySelector('.displayText').textContent = operate(firstValue, operatorValue, secondValue);});
-
+     firstValue = document.querySelector('.displayText').textContent;
+     console.log(`after equals ${firstValue} is firstvalue, ${secondValue} is second`);
      
