@@ -27,6 +27,10 @@ div {
     border-style: solid;
 }
 
+img {
+    width: 33%;
+}
+
 span {
     position: relative;
     display: block;
@@ -45,6 +49,12 @@ span {
     text-align: right;
     right: 3px;
 }
+
+/* ##########################
+    Buttons
+########################## */
+
+
 button {
     box-shadow: 2px 2px rgb(13, 28, 32);
     border-color: rgb(146, 241, 210);
@@ -53,6 +63,7 @@ button {
     height: 35px;
 }
 
+
 button:hover {
     background-color: lightgreen;
 }
@@ -60,6 +71,11 @@ button:hover {
 #exclude {
     background-color: lightsalmon;
 }
+
+#exclude.power{
+    background-color: rgb(32, 207, 219);
+}
+
 
 .topRowButtons {
     display: grid;
