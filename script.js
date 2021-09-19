@@ -91,7 +91,10 @@ var powerButton = document.querySelector(".power");
 
 
 powerButton.addEventListener("click", function() {
-
+    onlyNumbers = '';
+    firstValue = '';
+    secondValue = '';
+    operatorValue = '';
     document.querySelector('p.displayText').textContent = "";
     document.getElementById("displaySpan").classList.toggle("display"); 
 
