@@ -4,6 +4,7 @@
 body {
     
     outline: orange, solid, 5px;
+    background-color: rgb(58, 52, 52);
 }
 
 
@@ -13,7 +14,7 @@ body {
 ########################## */
 div {
     width: 300px;
-	height: 350px;
+	height: 335px;
 	background-color: rgb(30, 104, 146);
 	
 	position: absolute;
@@ -21,9 +22,9 @@ div {
 	bottom: 0;
 	left: 0;
 	right: 0;
-  	
+  	padding: 0 5px;
 	margin: auto;
-    border: grey 5px;
+    border: rgb(82, 142, 170) 5px;
     border-style: solid;
 }
 
